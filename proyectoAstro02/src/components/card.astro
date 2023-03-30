@@ -1,0 +1,14 @@
+---
+interface Props {
+    title?: string;
+    content?: string;
+}
+
+const {title = "Default title", content = "content default"} = Astro.props
+---
+
+<div class="flex flex-col justify-center items-center p-6 mb-4 mx-4 border-4 border-amber-400 rounded-md">
+    <h1 class="text-center font-bold mb-2">{title}</h1>
+    <p class="text-center text-sm mb-2">{content}</p>
+     <slot/>
+</div>

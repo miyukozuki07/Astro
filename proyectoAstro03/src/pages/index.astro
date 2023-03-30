@@ -1,0 +1,108 @@
+---
+import Layout from "../components/layout.astro";
+import Nav from "../components/navegacion.astro";
+import Sec from "../components/seccionQuienes.astro";
+import Ext from "../components/seccionServExt.astro";
+import Int from "../components/seccionServInt.astro";
+import Sun from "../components/seccionUnam.astro";
+---
+
+<Layout title="Dirección de Colaboración y Vinculación">
+	<header class="flex flex-wrap justify-around bg-endeavour-700">
+		<img class="h-14 m-2" src="/logo.png" alt="logoDGTIC">
+		<h1 class="text-base text-white font-normal p-4 m-2">Dirección de Colaboración y Vinculación</h1>
+	</header>
+
+	<!--Menú -->
+	<nav class="flex flex-wrap justify-center items-center bg-endeavour-800">
+		<Nav title="Quiénes somos" href="#seccion-quienes"/>
+		<Nav title="Servicios externos" href="#seccion-externo"/>
+		<Nav title="Servicios internos" href="#seccion-interno"/>
+		<Nav title="Toda la UNAM en Línea" href="#seccion-unam"/>
+		<Nav title="Actualidad"/>
+		<Nav title="Becas en Ingeniería de Software" href="http://www.becas.software.unam.mx/"/>
+	</nav>
+    
+	<!--Carrusel de imagenes-->
+	<div class="h-auto">
+		<img class="h-auto w-full" src="/carousel.jpg" alt="ofertas">
+	</div>
+
+	<main class="m-4">
+	
+		<h2 class="text-2xl text-endeavour-700 font-roboto font-bold text-center">Dirección de Colaboración y Vinculación</h2>
+
+		<!--Secciones principales -->
+		<div class="px-56 mx-auto">
+
+			<!--Quienes somos-->
+			<Sec 
+				title="Quiénes somos" 
+				content="La Dirección de Colaboración y Vinculación (DCV) forma parte de la Dirección General de Cómputo y de Tecnologías de Información y Comunicación (DGTIC) de la Universidad Nacional Autónoma de México (UNAM)."
+				content1="Estamos comprometidos con las organizaciones con las que colaboramos, por lo que establecemos una relación de aliados tecnológicos, brindamos diversos servicios y soluciones de Tecnologías de Información y Comunicación (TIC)."
+				content2="Somos expertos en:"
+				op="Desarrollo de Software"
+				op1="Análisis"
+				op2="Rediseño de bases de datos, en la realización de Auditorías de software, así como Consultoría en TIC"
+				op3="Mejora de procesos"
+				op4="Gobierno de TIC, entre otros servicios"
+				content3="Contamos con más de 20 años de experiencia basada en buenas prácticas de TIC, personal especializado y con la certificación internacional ISO 9001:2015, que avala la calidad de nuestros servicios en la administración de proyectos de soluciones TIC.">
+				<div class="flex justify-center mt-6">
+					<img class="px-20" src="/imagen1.png" alt="ilust1">
+				</div>	
+			</Sec>
+
+			<!--Servicios externos-->
+			<Ext 
+				title="Servicios externos (Vinculación)"
+				cont="La participación de la UNAM en proyectos de vinculación en Tecnologías de Información y Comunicación con el sector público se lleva a cabo bajo convenios de colaboración académica y en estricto apego a la normatividad institucional, en los que se busca actuar como un aliado de valor para la institución pública, por lo que no se participa en estudios de mercado."
+				cont1="Por lo que, al planteamiento de una solicitud de propuesta por parte de la Universidad, se trabaja de manera conjunta con la institución solicitante para delinear un marco de colaboración académica para proyectos específicos, que agregue valor a su estrategia."
+				cont2="En este marco, se busca el establecimiento de alianzas para impulsar soluciones tecnológicas que contribuyan a atender problemas nacionales."
+				cont3="Asimismo, se tienen los marcos de trabajo necesarios para desarrollar proyectos de vinculación con otros sectores, sin embargo, es importante destacar que la vinculación en TIC de esta Dirección General se realiza mayoritariamente con sector público."
+				cont4="Contacto:"
+				cont5="- Correo electrónico "
+				href="mailto:colaboracion.vinculacion@unam.mx"
+				enlace="colaboracion.vinculacion@unam.mx"
+				cont6="- Teléfono 55 56 22 36 65.">
+				<img class="m-4 h-[230px] rounded-full shadow-lg shadow-gray-500" src="/imagen2.jpg" alt="serviciosExt">
+			</Ext>
+
+			<!--Servicios Internos-->
+			<Int
+				title="Servicios Internos (Colaboración)"
+				cont="Los servicios internos o de colaboración se ofrecen a entidades y dependencias universitarias, bajo un esquema de recuperación de costos."
+				cont1="Desarrollamos software a la medida, sistemas de información en lenguaje PHP, portales y sitios web, sin desarrollo de apps; además de apoyar a la mejora de la visibilidad de los sitios institucionales en Internet."
+				cont2="Para llevar a cabo la colaboración es necesario, se requiere que en la presentación de su solicitud atienda todos los puntos que se indican en las políticas de este servicio, que puede"
+				cont3="Por la naturaleza de este servicio, es importante planear detalladamente cada caso específico para evaluar la posibilidad de apoyar a las entidades y dependencias de la UNAM que lo soliciten."
+				cont4="Contacto:"
+				cont5="- Correo electrónico "
+				href="mailto:colaboracion.vinculacion@unam.mx"
+				enlace="colaboracion.vinculacion@unam.mx"
+				cont6="- Teléfono 55 56 22 36 65.">
+				<img class="m-4 h-[230px] rounded-full shadow-lg shadow-gray-500" src="/imagen3.jpg" alt="serviciosInt">
+			</Int>
+
+			<!--Toda la UNAM en Línea-->
+			<Sun
+				title="Toda la UNAM en Línea"
+				cont="Toda la UNAM en Línea propone dar plenas condiciones de acceso abierto al conocimiento generado por la institución para extenderlo a la sociedad en su conjunto."
+				cont1="DGTIC impulsa la clasificación, visibilidad y uso de los contenidos digitales en acceso abierto en la docencia, la investigación y la difusión de la cultura. A través del programa institucional Toda la UNAM en Línea, la Universidad proyecta sus contenidos digitales, y promueve y facilita su depósito."
+				cont2="DGTIC ofrece servicios de asesorías y apoyo técnico en presencia Web y gestión de redes sociales, desarrollamos proyectos en colaboración con entidades y dependencias universitarias."
+				cont3="Por la naturaleza de los servicios, es necesario analizar cada caso específico, por lo que le solicitamos establecer contacto por alguno de los siguientes medios:"
+				cont4="- URL: "
+				cont5="- Correo electrónico: "
+				cont6="- Twitter: "
+				cont7="- Facebook: ">
+				<div class="flex justify-center mt-6">
+					<img class="h-[250px] rounded-full shadow-lg shadow-gray-500" src="/imagen4.png" alt="UnamEnLinea">
+				</div>	
+			</Sun>
+
+			
+		</div>
+
+		
+	</main>
+
+
+</Layout>

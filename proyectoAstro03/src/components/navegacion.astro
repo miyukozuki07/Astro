@@ -1,0 +1,10 @@
+---
+interface Props{
+    title?: string;
+    href?: string;
+}
+
+const {title = "seccion", href ="#"} = Astro.props;
+---
+
+<a class="text-xs text-white font-roboto font-thin mx-4 p-2" href={href}>{title}</a>

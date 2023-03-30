@@ -1,0 +1,44 @@
+---
+interface Props {
+    title?: string;
+    cont?: string;
+    cont1?: string;
+    cont2?: string;
+    cont3?: string;
+    cont4?: string;
+    cont5?: string;
+    cont6?: string;
+    href?: string;
+    enlace?: string;
+}
+
+const {title, cont, cont1, cont2, cont3, cont4, cont5, cont6, href, enlace} = Astro.props;
+---
+
+<div id="seccion-interno" class="pt-5 pb-14 mb-8 border-b-[1px] border-zinc-900 border-dotted">
+    <div class="grid grid-cols-3">
+        
+        <!--Primera y segunda columna-->
+        <div class="col-span-2 m-2">
+            <h3 class="text-endeavour-700 text-xl font-roboto font-bold mb-2">{title}</h3>
+            <p class="text-zinc-700 text-justify text-sm font-thin mb-2.5">{cont}</p>
+            <p class="text-zinc-700 text-justify text-sm font-thin mb-2.5">{cont1}</p>
+            <p class="text-zinc-700 text-justify text-sm font-thin mb-2.5">{cont2}
+                <a class="text-endeavour-700 text-sm font-bold" href="https://colaboracion-vinculacion.tic.unam.mx/docs/DCV-PoliticasServiciosColaboracion2020_1.pdf">consultar aquí</a>
+            </p>
+            <p class="text-zinc-700 text-justify text-sm font-thin mb-2.5">{cont3}</p>
+            <p class="text-zinc-500 text-justify text-sm font-bold mb-2.5">{cont4}</p>
+            <p class="text-zinc-700 text-justify text-sm font-thin mb-2.5">{cont5}
+            <a class="text-blue-600 hover:underline" href={href}>{enlace}</a><br>{cont6}</p>
+        </div>
+        
+        <!--Imagen en la tercera columna-->
+        <div class="flex justify-center">
+            <slot/>
+        </div>
+
+
+    </div>
+        
+    
+</div>

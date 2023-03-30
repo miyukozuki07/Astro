@@ -1,0 +1,182 @@
+---
+import '../styles.css';
+import bgImage from "../img/diseñoweb1.jpg";
+import Card from "../components/card.astro";
+import Nav from "../components/navegacion.astro";
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body class="bg-blue-50 font-krub">
+		<header class="flex justify-center m-2">
+			<h1 class="text-gray-900 text-2xl font-bold m-2">Paola de los Angeles Avila Reyes</h1>
+			<h2 class="text-gray-900 text-sm font-bold mt-4">Freelancer</h2>
+		</header>
+
+		<nav class="flex flex-wrap justify-evenly bg-cyan-600">
+			<Nav title="Inicio" href="."/>
+			<Nav title="Sobre Mí" href="./sobremi"/>
+			<Nav title="Clientes" href="./clientes"/>
+			<Nav title="Contacto"/>
+		</nav>
+
+		<main class="bg-[url('/hero.jpg')] bg-cover h-80">
+			
+			<section class="bg-black bg-opacity-60 h-80">
+
+				<div class="p-20">
+					<h2 class="font-bold text-white text-xl text-center">Diseño y Desarrollo Web Freelancer</h2>
+					<div class="flex flex-wrap justify-center items-end mb-4">
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="64" height="64" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+							<circle cx="12" cy="11" r="3" />
+							<path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+						</svg>
+						<p class="m-2 text-white text-xs text-center">Valle de Chalco Sol, Edo. de México</p>
+					</div>
+					
+					<div class="flex justify-center">
+						<a class="bg-cyan-600 text-white text-sm font-bold width:10 rounded-sm p-2"href="#">CONTACTAR</a>
+					</div>
+				</div>
+
+			</section>
+
+			
+			<section class="bg-orange-50 shadow-xl justify-center rounded-md mt-4 lg:mx-8 xl:mx-60">
+				<div>
+					<h2 class="text-xl text-center font-bold mb-4 pt-10 pb-2">Mis servicios</h2>
+					<div class="grid grid-cols-3 gap-4 mx-10">
+						<!--Primera columna -->
+						<article class="flex flex-col items-center">
+							<h3 class="text-teal-500 text-center mb-4">Diseño Web</h3>
+							<div class="flex justify-evenly items-center bg-amber-400 w-28 h-28 rounded-full mb-4">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-palette" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								<path d="M12 21a9 9 0 1 1 0 -18a9 8 0 0 1 9 8a4.5 4 0 0 1 -4.5 4h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
+								<circle cx="7.5" cy="10.5" r=".5" fill="currentColor" />
+								<circle cx="12" cy="7.5" r=".5" fill="currentColor" />
+								<circle cx="16.5" cy="10.5" r=".5" fill="currentColor" />
+								</svg>
+							</div>
+							<p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, doloremque.</p>
+						</article>
+
+						<!--Segunda columna -->
+						<article class="flex flex-col items-center">
+							<h3 class="text-teal-500 text-center mb-4">Aplicaciones web</h3>
+							<div class="flex justify-evenly items-center bg-amber-400 w-28 h-28 rounded-full mb-4">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-android" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								<line x1="4" y1="10" x2="4" y2="16" />
+								<line x1="20" y1="10" x2="20" y2="16" />
+								<path d="M7 9h10v8a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-8a5 5 0 0 1 10 0" />
+								<line x1="8" y1="3" x2="9" y2="5" />
+								<line x1="16" y1="3" x2="15" y2="5" />
+								<line x1="9" y1="18" x2="9" y2="21" />
+								<line x1="15" y1="18" x2="15" y2="21" />
+								</svg>
+							</div>
+							
+							<p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, doloremque.</p>
+						</article>
+
+						<!--Tercera columna -->
+						<article class="flex flex-col items-center">
+							<h3 class="text-teal-500 text-center mb-4">Aplicaciones web</h3>
+							<div class="flex justify-evenly items-center bg-amber-400 w-28 h-28 rounded-full mb-4">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="48" height="48" viewBox="0 0 	24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								<rect x="3" y="5" width="18" height="14" rx="3" />
+								<line x1="3" y1="10" x2="21" y2="10" />
+								<line x1="7" y1="15" x2="7.01" y2="15" />
+								<line x1="11" y1="15" x2="13" y2="15" />
+								</svg>
+							</div>
+							
+							<p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, doloremque.</p>
+						</article>
+						
+					</div>
+				</div>
+
+				<!--Seccion Opiniones -->
+				<div class="mt-14 mx-8">
+					<h2 class="text-xl text-center font-bold pt-8 pb-4">Opiniones</h2>
+					<div class="grid grid-cols-2 md:grid-cols-3 mt-2 mx-6">
+						<Card 
+							title="Gran experiencia de Usuario" 
+							content="Construye paginas con una gran experiencia de usuario, faciles de navegar.">
+							<img class="w-20 h-20 rounded-full border-4 border-amber-400" src="diseñoweb1.jpg" alt="reseña1">
+						</Card>
+
+						<Card 
+							title="Diseño increíble" 
+							content="El diseño de mi página quedo espectacular, ampliamente la recomiendo.">
+							<img class="w-20 h-20 rounded-full border-4 border-amber-400" src="diseñoweb1.jpg" alt="reseña1">
+					    </Card>
+
+						<Card 
+							title="Precios acorde a lo que buscas" 
+							content="Una pagina sencilla pero con un estilo elegante tiene un precio formidable.">
+							<img class="w-20 h-20 rounded-full border-4 border-amber-400" src="diseñoweb1.jpg" alt="reseña1">
+						</Card>
+
+				    </div>		
+				</div>			
+					
+				
+				<!--Formulario -->
+				<div class="flex flex-col justify-center items-center">
+					<h2 class="text-xl text-center font-bold pt-8 pb-4">Contacto</h2>
+					<form class="bg-zinc-500 rounded-md w-[500px] mb-4">
+						<fieldset>
+							<legend class="text-amber-400 text-center font-bold p-2">CONTACTÁNOS LLENANDO TODOS LOS CAMPOS</legend>
+							<div class="md:grid grid-cols-2 mx-2">
+								<article class="mx-4">
+									<label class="text-sm text-white font-bold">Nombre</label>
+                        			<input class="p-2 rounded-md w-full" type="text" placeholder="Tu nombre">
+								</article>
+
+								<article class="mx-4">
+									<label class="text-sm text-white font-bold">Teléfono</label>
+                        			<input class="p-2 rounded-md w-full" type="tel" placeholder="Tu telefono">
+								</article>
+
+								<article class="col-span-2 mx-4">
+									<label class="text-sm text-white font-bold">Correo</label>
+                        			<input class="p-2 rounded-md w-full" type="email" placeholder="Tu email">
+								</article>
+
+								<article class="col-span-2 mx-4">
+									<label class="text-sm text-white font-bold">Mensaje</label>
+                        			<textarea class="h-20 w-full rounded-md"></textarea>
+								</article>
+							</div>
+
+							<div class="flex flex-row items-end bg-cyan-600 w-full md:w-16 rounded-sm md:mx-6 mt-2">
+								<button class="text-white text-sm text-center font-bold p-1 m-1" type="submit">ENVIAR</button>
+							</div>
+
+						</fieldset>
+	
+					</form>
+				</div>
+			</section>
+
+			<!--Pie de página -->
+			<div class="mt-2">
+				<footer>
+					<p class="text-center text-xs">Todos los derechos reservados. Paola de los Angeles Avila Reyes</p>
+				</footer>
+			</div>
+				
+		</main>
+
+	</body>
+</html>

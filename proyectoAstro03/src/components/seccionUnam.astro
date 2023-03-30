@@ -1,0 +1,30 @@
+---
+interface Props {
+    title?: string;
+    cont?:string;
+    cont1?:string;
+    cont2?:string;
+    cont3?:string;
+    cont4?:string;
+    cont5?:string;
+    cont6?:string;
+    cont7?:string;
+}
+
+const {title, cont, cont1, cont2, cont3, cont4, cont5, cont6, cont7} = Astro.props;
+---
+
+<div id="seccion-unam" class="pt-5 pb-14 mb-8 border-b-[1px] border-zinc-900 border-dotted">
+    <h3 class="text-endeavour-700 text-xl font-roboto font-bold mb-2">{title}</h3>
+    <p class="text-zinc-700 text-justify text-sm font-thin mb-2.5">{cont}</p>
+    <p class="text-zinc-700 text-justify text-sm font-thin mb-2.5">{cont1}</p>
+    <p class="text-zinc-700 text-justify text-sm font-thin mb-2.5">{cont2}</p>
+    <p class="text-zinc-700 text-justify text-sm font-thin mt-2.5">{cont3}</p>
+    <p class="text-zinc-700 text-justify text-sm font-thin mt-2.5">{cont4}
+        <a class="text-blue-600 hover:underline" href="http://www.unamenlinea.unam.mx/">www.unamenlinea.unam.mx</a><br>
+        {cont5} <a class="text-blue-600 hover:underline" href="mailto:todalaunam@comunidad.unam.mx">todalaunam@comunidad.unam.mx</a><br>
+        {cont6} <a class="text-blue-600 hover:underline" href="https://twitter.com/Toda_la_UNAM">@Toda_la_UNAM</a><br>
+        {cont7} <a class="text-blue-600 hover:underline" href="https://www.facebook.com/TodalaUNAMenlinea">TodalaUNAMenLinea</a></p>
+
+    <slot/>
+</div>

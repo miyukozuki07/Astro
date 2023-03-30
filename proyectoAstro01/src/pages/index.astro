@@ -1,0 +1,55 @@
+---
+//Todo el codigo de javascript que se coloque dentro de esta sección se puede agregar al html, ver el ejemplo de la siguiente variable aplicada al h1 del archivo. Para que se pueda acceder al valor de la variable en el archivo html, se debe colocar entre llaves.
+const title = "Mi proyecto en Astro!!!";
+const color = "warning";
+
+const hobbies = [
+	"Programar",
+	"Leer",
+	"Escribir",
+	"Ver peliculas",
+	"Programar",
+	"Leer",
+	"Escribir",
+	"Ver peliculas",
+];
+
+const isActive = false;
+---
+
+<ul>
+	{
+		hobbies.map((hobby) => (
+			<li>
+				<h3>{hobby}</h3>
+				<button>Like</button>
+			</li>
+		))
+	}
+</ul>
+
+<h3 class="danger">
+	<!--{isActive ? "El usuario esta activo" : "El usuario esta desactivado"}-->
+	<!--{isActive && "El usuario esta activo"}--> <!--Cuando solo se evalua si la variable es true-->
+		{!isActive && "El usuario no esta activo"} <!--Cuando solo se evalua si la variable es false-->
+	</h3>
+
+<script>
+	console.log("Hello World!");
+</script>
+
+<style>
+	body {
+		background: #202020;
+		color: white;
+	}
+	.title {
+		color: skyblue;
+	}
+	.danger {
+		color: red;
+	}
+	.warning {
+		color: yellow;
+	}
+</style>

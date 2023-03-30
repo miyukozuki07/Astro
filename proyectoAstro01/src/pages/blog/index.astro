@@ -1,0 +1,39 @@
+---
+import Layout from "../../components/layout.astro";
+import bgImage from "../../img/sailor3.png";  /*Para ocupar una imagen dentro de la carpeta img se debe importar como se muestra en esta linea*/
+
+const posts = await Astro.glob('./posts/*.md'); /*la funcion .glob permite cargar distintos archivos, la sintaxis es para cargar todos los archivos que terminen con extension .md*/
+/*console.log(posts);*/
+---
+
+
+<Layout pageTitle="Blog de Desarrollo" 
+pageDescription="Tutoriales de desarrollo y programacion">
+    <h1>Blog</h1>
+
+    <!--<img width="60" src="https://images.pexels.com/photos/11856438/pexels-photo-11856438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">-->
+
+    <!--Desde la PC, guardando la imagen en la carpeta public-->
+    <!--<img width="100" src="/museDash1.png" alt="">--> 
+
+    <!--Desde la carpeta img en src-->
+    <img width="100" src={bgImage} alt=""> 
+
+    {
+        posts.map(post =>{
+            return <a class="link" href={post.url}>{post.frontmatter.title}</a>
+        })
+    }
+
+    <style>
+        .link {
+            background: wheat;
+            color: black;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 4px;
+        }
+    </style>
+    
+    
+</Layout>

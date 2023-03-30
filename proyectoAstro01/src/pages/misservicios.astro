@@ -1,0 +1,28 @@
+---
+import Card from "../components/card.astro";
+import Layout from "../components/layout.astro";
+---
+
+<Layout pageTitle="Mis servicios">
+    <h1>Mis servicios</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            veritatis officia maxime iste nam! Tenetur qui dolore cupiditate
+            assumenda quidem.
+        </p>
+
+        <Card title="hola mundo" content="este es una prueba" />
+        <!--Tambien se puede declarar de la siguiente forma: <Card/> ya que no se le esta agregando ningun cambio-->
+
+        <Card
+            title="programacion"
+            content="servicios de desarrollo de aplicaciones"
+        />
+        <Card title="Diseño" content="diseño de interface web" />
+        <Card
+            title="asistencia profesional"
+            content="ofrecemos asistencia profesional"
+        />
+
+        <Card/>
+</Layout>
